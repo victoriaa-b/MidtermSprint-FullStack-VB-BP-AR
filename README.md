@@ -1,6 +1,4 @@
-Here's a README template for your midterm project, modeled after the restaurant menu generator format:
-
----
+This midterm sprint is created by Victoria Breen, Beth-Ann Penney and Anhelina Romanchuck. 
 
 # Movie Collection Viewer - Template Repository
 
