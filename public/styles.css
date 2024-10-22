@@ -1,7 +1,11 @@
-/* Base styling, feel free to remove or alter */
 
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 body {
-    background: linear-gradient(90deg, rgba(93,142,251,1) 0%, rgba(93,142,251,1) 50%, rgba(0,212,255,1) 100%);
+    background: #BBD1EA;
     height: 100%;
     padding: 0px;
     margin: 0px;
@@ -20,4 +24,43 @@ body {
 
 .main-content h1 {
     font-size: 50px;
+}
+
+header {
+    background-color: #BBD1EA; 
+    color: #FFFFFF; 
+    text-align: center; 
+    padding: 20px; 
+    width: 100%;
+    border-bottom: 1px solid #003459;
+}
+
+header h1 {
+    font-family: "Limelight", sans-serif; 
+    font-size: 40px;
+    margin-bottom: 10px; 
+    text-shadow: #003459 2px 2px 2px ;
+}
+nav {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 10px; 
+    font-size: 20px;
+    align-items: center;
+    gap: 15px;
+  
+}
+
+nav a {
+    color: #003459; 
+    text-decoration: none;
+    padding: 10px 15px; 
+    font-weight: 800;
+}
+
+nav img {
+    height: 50px; 
+    width: 50px; 
+    margin: 0 10px; 
+    vertical-align: middle; 
 }
