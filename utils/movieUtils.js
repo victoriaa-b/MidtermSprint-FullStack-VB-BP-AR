@@ -36,6 +36,15 @@ function selectRandomMovieId() {
     // Implementation here
 }
 
+function getUpcomingMovies(Movies) {
+  // want movies that are upcoming
+  // select the movie by future dates: year?
+  const currentYear = new Date().getFullYear();
+  // want movies that has not been relased yet 
+  const upcomingMovies = Movies.filter((Movies) => Movies.releaseYear > currentYear);
+
+  return upcomingMovies;
+}
 
 
 // Export the functions to be used in other modules
@@ -44,4 +53,5 @@ module.exports = {
     getTopRatedMovies,
     getMovieDetailsById,
     selectRandomMovieId,
+    getUpcomingMovies,
 };

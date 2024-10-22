@@ -32,7 +32,8 @@ header {
     text-align: center; 
     padding: 20px; 
     width: 100%;
-    border-bottom: 1px solid #003459;
+    box-shadow: 2px 2px 3px  #003459;
+  
 }
 
 header h1 {
@@ -56,6 +57,17 @@ nav a {
     text-decoration: none;
     padding: 10px 15px; 
     font-weight: 800;
+
+}
+
+nav a:hover {
+    color: #FFFFFF; 
+    border-bottom: 1.5px solid #FFFFFF;
+    padding-bottom: 5px; 
+    padding: 10px 15px; 
+    font-weight: 800;
+    text-shadow: #003459 2px 2px 4px ;
+    
 }
 
 nav img {
