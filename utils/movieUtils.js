@@ -42,7 +42,7 @@ function getUpcomingMovies(Movies) {
   // select the movie by future dates: year?
   const currentYear = new Date().getFullYear();
   // want movies that has not been relased yet 
-  const upcomingMovies = Movies.filter((Movies) => Movies.releaseYear > currentYear);
+  const upcomingMovies = Movies.filter((movie) => movie.releaseYear > currentYear);
 
   return upcomingMovies;
 }

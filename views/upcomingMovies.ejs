@@ -1,10 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/header') %> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Movies</title>
+    <link rel="stylesheet" href="/path/to/your/style.css"> 
+</head>
 <body>
-    <main class="main-content">
-    </main>
-    
+    <%- include('partials/header') %> 
+    <h1>Upcoming Movies</h1>
+    <div class="movieContainer">
+        <% movies.forEach(movie => { %>
+            <div class="movieItem">
+                <img src="<%= movie.image %>" alt="<%= movie.title %> Poster" class="poster">
+                <h2><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h2>
+                <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
+                <p><strong>Description:</strong> <%= movie.description %></p>
+            </div>
+        <% }); %>
+    </div>
+
 </body>
 </html>

@@ -22,7 +22,7 @@ const Movies = [
     director: "Francis Ford Coppola",
     rating: 9.2,
     genre: Genres.CRIME,
-    image: "/public/images/thegodfather.png",
+    image: "/images/thegodfather.png",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const Movies = [
     director: "Christopher Nolan",
     rating: 8.8,
     genre: Genres.SCI_FI,
-    image: "/public/images/inception.png",
+    image: "/images/inception.png",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const Movies = [
     director: "Christopher Nolan",
     rating: 9.0,
     genre: Genres.ACTION,
-    image: "/public/images/darkKnight.png",
+    image: "/images/darkKnight.png",
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ const Movies = [
     director: "Steven Spielberg",
     rating: 9.0,
     genre: Genres.DRAMA,
-    image: "/public/images/schindlerlist.webp",
+    image: "/images/schindlerlist.webp",
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ const Movies = [
     director: "Quentin Tarantino",
     rating: 8.9,
     genre: Genres.CRIME,
-    image: "/public/images/pulpfiction.webp",
+    image: "/images/pulpfiction.webp",
   },
   {
     id: 6,
@@ -77,7 +77,7 @@ const Movies = [
     director: "Peter Jackson",
     rating: 8.8,
     genre: Genres.FANTASY,
-    image: "/public/images/lordofthering.png",
+    image: "/images/lordofthering.png",
   },
   {
     id: 7,
@@ -88,7 +88,7 @@ const Movies = [
     director: "Robert Zemeckis",
     rating: 8.8,
     genre: Genres.DRAMA,
-    image: "/public/images/thegodfather.png",
+    image: "/images/thegodfather.png",
   },
   {
     id: 8,
@@ -99,7 +99,7 @@ const Movies = [
     director: "David Fincher",
     rating: 8.8,
     genre: Genres.DRAMA,
-    image: "/public/images/fightClub.png",
+    image: "/images/fightClub.png",
   },
   {
     id: 9,
@@ -110,7 +110,7 @@ const Movies = [
     director: "Christopher Nolan",
     rating: 8.6,
     genre: Genres.SCI_FI,
-    image: "/public/images/interstellar.png",
+    image: "/images/interstellar.png",
   },
   {
     id: 10,
@@ -121,7 +121,7 @@ const Movies = [
     director: "Ridley Scott",
     rating: 8.5,
     genre: Genres.ACTION,
-    image: "/public/images/gladiator.png",
+    image: "/images/gladiator.png",
   },
   {
     id: 11,
@@ -132,7 +132,7 @@ const Movies = [
     director: "Lana Wachowski, Lilly Wachowski",
     rating: 8.7,
     genre: Genres.SCI_FI,
-    image: "/public/images/theMatrix.png",
+    image: "/images/theMatrix.png",
   },
   {
     id: 12,
@@ -143,7 +143,7 @@ const Movies = [
     director: "Steven Spielberg",
     rating: 8.6,
     genre: Genres.WAR,
-    image: "/public/images/savingPrivateRyan.png",
+    image: "/images/savingPrivateRyan.png",
   },
   {
     id: 13,
@@ -154,7 +154,7 @@ const Movies = [
     director: "Frank Darabont",
     rating: 9.3,
     genre: Genres.DRAMA,
-    image: "/public/images/theShawshankRedemption.png",
+    image: "/images/theShawshankRedemption.png",
   },
   {
     id: 14,
@@ -165,7 +165,7 @@ const Movies = [
     director: "Bong Joon Ho",
     rating: 8.6,
     genre: Genres.THRILLER,
-    image: "/public/images/parasite.png",
+    image: "/images/parasite.png",
   },
   {
     id: 15,
@@ -176,7 +176,7 @@ const Movies = [
     director: "George Miller",
     rating: 8.1,
     genre: Genres.ACTION,
-    image: "/public/images/madMaxFuryRoad.webp",
+    image: "/images/madMaxFuryRoad.webp",
   },
   {
     id: 16,
@@ -187,7 +187,7 @@ const Movies = [
     director: "Roger Allers, Rob Minkoff",
     rating: 8.5,
     genre: Genres.ANIMATION,
-    image: "/public/images/theLionKing.png",
+    image: "/images/theLionKing.png",
   },
   {
     id: 17,
@@ -198,7 +198,7 @@ const Movies = [
     director: "Anthony Russo, Joe Russo",
     rating: 8.4,
     genre: Genres.ACTION,
-    image: "/public/images/avengersEndgame.png",
+    image: "c/images/avengersEndgame.png",
   },
   {
     id: 18,
@@ -209,7 +209,7 @@ const Movies = [
     director: "John Lasseter",
     rating: 8.3,
     genre: Genres.ANIMATION,
-    image: "/public/images/toyStory.png",
+    image: "/images/toyStory.png",
   },
   {
     id: 19,
@@ -220,7 +220,7 @@ const Movies = [
     director: "James Cameron",
     rating: 7.9,
     genre: Genres.ROMANCE,
-    image: "/public/images/titanic.png",
+    image: "/images/titanic.png",
   },
   {
     id: 20,
@@ -231,7 +231,7 @@ const Movies = [
     director: "Steven Spielberg",
     rating: 8.1,
     genre: Genres.ADVENTURE,
-    image: "/public/images/jurassicPark.png",
+    image: "/images/jurassicPark.png",
   },
 
   // Fictional unreleased movies
@@ -244,7 +244,7 @@ const Movies = [
     director: "Emily Summers",
     rating: null,
     genre: Genres.SCI_FI,
-    image: "/public/images/marsUprising.png",
+    image: "/images/marsUprising.png",
   },
   {
     id: 22,
@@ -255,7 +255,7 @@ const Movies = [
     director: "James Harker",
     rating: null,
     genre: Genres.THRILLER,
-    image: "/public/images/theLastAstronaut.png",
+    image: "/images/theLastAstronaut.png",
   },
   {
     id: 23,
@@ -266,7 +266,7 @@ const Movies = [
     director: "Isabella Cruz",
     rating: null,
     genre: Genres.SCI_FI,
-    image: "/public/images/quantumParadox.png",
+    image: "/images/quantumParadox.png",
   },
   {
     id: 24,
@@ -277,7 +277,7 @@ const Movies = [
     director: "Cameron Gray",
     rating: null,
     genre: Genres.ACTION,
-    image: "/public/images/echoesOfTomorrow.png",
+    image: "/images/echoesOfTomorrow.png",
   },
   {
     id: 25,
@@ -288,7 +288,7 @@ const Movies = [
     director: "Lara Stone",
     rating: null,
     genre: Genres.ADVENTURE,
-    image: "/public/images/theForgottenIsland.png",
+    image: "/images/theForgottenIsland.png",
   },
   {
     id: 26,
@@ -299,7 +299,7 @@ const Movies = [
     director: "Michael Liu",
     rating: null,
     genre: Genres.CRIME,
-    image: "/public/images/nightfallCity.png",
+    image: "/images/nightfallCity.png",
   },
   {
     id: 27,
@@ -310,7 +310,7 @@ const Movies = [
     director: "Sarah White",
     rating: null,
     genre: Genres.SCI_FI,
-    image: "/public/images/lunarColony.png",
+    image: "/images/lunarColony.png",
   },
   {
     id: 28,
@@ -321,7 +321,7 @@ const Movies = [
     director: "John Doe",
     rating: null,
     genre: Genres.ACTION,
-    image: "/public/images/codeBreaker.png",
+    image: "/images/codeBreaker.png",
   },
 ];
 
