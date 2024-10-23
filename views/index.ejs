@@ -1,12 +1,19 @@
 <!---Home-->
 <!---Top rated movies -->
-<!---Rand Moives om-->
+<!---Rand Movies om-->
 <!---Upcoming Movies-->
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/header') %> 
 <body>
     <main class="main-content">
+        <% movies.forEach(movie => { %>
+            <div class="movie">
+                <h2><%= movie.title %></h2>
+                <p><%= movie.genre %></p>
+                <p>Rating: <%= movie.rating %></p>
+            </div>
+        <% }); %>
     </main>
     
 </body>
