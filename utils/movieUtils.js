@@ -6,17 +6,17 @@ const { Movies, Genres } = require("./data");
  * @param {number} x - The number of movies to retrieve
  * @returns {Array.<Movies>} - An array of movies matching the genre
  */
-function getMoviesByGenre(genre, x) {
-    // Implementation here
-}
-
+function getMoviesByGenre(genre, count) {
+        return movieData.filter(movie => movie.genre === genre).slice(0, count);
+    }
+    
 /**
  * Get the `x` top rated movies, ordered by rating
  * @param {number} x - The number of top-rated movies to retrieve
  * @returns {Array.<Movies>} - An array of top-rated movies
  */
 function getTopRatedMovies(x) {
-    // Implementation here
+    return movieData.sort((a, b) => b.rating - a.rating).slice(0, 15);
 }
 
 /**
@@ -25,7 +25,7 @@ function getTopRatedMovies(x) {
  * @returns {Movies} - The movie object
  */
 function getMovieDetailsById(id) {
-    // Implementation here
+    return movieData.find(movie => movie.id === id);
 }
 
 /**
@@ -33,7 +33,8 @@ function getMovieDetailsById(id) {
  * @returns {number} - A random movie ID
  */
 function selectRandomMovieId() {
-    // Implementation here
+    let shuffled = movieData.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
 }
 
 function getUpcomingMovies(Movies) {

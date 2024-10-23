@@ -1,0 +1,8 @@
+app.get('/movie/:id', (req, res) => {
+    const movie = getMovieById(req.params.id);
+    if (movie) {
+        res.render('movie-detail', { movie: movie });
+    } else {
+        res.status(404).send('Movie not found');
+    }
+});
