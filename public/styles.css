@@ -77,3 +77,45 @@ nav img {
     margin: 0 10px; 
     vertical-align: middle; 
 }
+
+
+.movieContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 20px; 
+    
+}
+
+.movieItem {
+    flex: 1 1 calc(50% - 20px); 
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center; 
+  
+}
+
+.movieItem img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+.movieContainer {
+    display: flex;            
+    flex-wrap: wrap;          
+    gap: 20px;               
+}
+
+.movieItem {
+    text-align: center;       
+    width: 200px;            
+}
+
+.poster {
+    width: 200px;           
+    height: 300px;          
+    object-fit: cover;  
+}    
+
