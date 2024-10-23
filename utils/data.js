@@ -288,7 +288,7 @@ const Movies = [
     director: "Lara Stone",
     rating: null,
     genre: Genres.ADVENTURE,
-    image: "/images/theForgottenIsland.png",
+    image: "/images/theForgottenIsland .png",
   },
   {
     id: 26,
