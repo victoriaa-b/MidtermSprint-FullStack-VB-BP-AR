@@ -21,13 +21,14 @@ app.get('/movie/:id', (request, response) => {
 
 //Add remaining routes here
 app.get("/upcomingMovies", (request, response) => {
-  const upcomingMovies = getUpcomingMovies(Movies); // logic in functions
+  const upcomingMovies = getUpcomingMovies(Movies).slice(0,5); // logic in functions
 
   response.render("upcomingMovies", { movies: upcomingMovies });
 });
 
-  app.get('/topRatedMovies', (request, response) => {
-    const topRatedMovies = getTopRatedMovies();
+  app.get('/topRatedmovies', (request, response) => {
+    const topRatedMovies = getTopRatedMovies(15);
+    console.log(topRatedMovies)
     response.render('topRatedMovies', { movies: topRatedMovies });
 });
 

@@ -3,3 +3,30 @@
 <!---Ratings should be- top to lowest->
 <!- Movies should have Title, Release year, Rating (out of 10), Brief description)
 <!-Clicking on that movie should bring you to the movie page for that movie-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Rated Movies</title>
+    <link rel="stylesheet" href="/path/to/your/style.css"> 
+</head>
+<body>
+    <%- include('partials/header') %> 
+
+    <h1>Top Rated Movies</h1>
+
+    <div class="movieContainer">
+        <% movies.forEach(movie => { %>
+            <div class="movieItem">
+                <h2><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h2>
+                <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
+                <p><strong>Rating:</strong> <%= movie.rating %> / 10</p>
+                <p><strong>Description:</strong> <%= movie.description %></p>
+            </div>
+        <% }); %>
+    </div>
+
+</body>
+</html>

@@ -198,7 +198,7 @@ const Movies = [
     director: "Anthony Russo, Joe Russo",
     rating: 8.4,
     genre: Genres.ACTION,
-    image: "c/images/avengersEndgame.png",
+    image: "/images/avengersEndgame.png",
   },
   {
     id: 18,

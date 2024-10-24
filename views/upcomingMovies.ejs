@@ -1,3 +1,7 @@
+<!--Five are displaying-->
+<!--movies needs title release year and description-->
+<!--Clciking on it will bring it to  mvies page -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +14,15 @@
     <%- include('partials/header') %> 
     <h1>Upcoming Movies</h1> <!--Not center, check-->
     <div class="movieContainer">
-        <% movies.forEach(movie => { %>
-            <div class="movieItem">
-                <img src="<%= movie.image %>" alt="<%= movie.title %> Poster" class="poster">
-                <h2><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h2>
-                <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
-                <p><strong>Description:</strong> <%= movie.description %></p>
-            </div>
-        <% }); %>
+    <% movies.forEach(movie => { %>
+    <div class="movieItem">
+        <h2><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h2>
+        <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
+        <p><strong>Rating:</strong> <%= movie.rating %> / 10</p>
+        <p><strong>Description:</strong> <%= movie.description %></p>
+    </div>
+<% }); %>
+
     </div>
 
 </body>
