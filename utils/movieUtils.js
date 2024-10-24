@@ -25,7 +25,7 @@ function getTopRatedMovies(x) {
  * @returns {Movies} - The movie object
  */
 function getMovieDetailsById(id) {
-    return movieData.find(movie => movie.id === id);
+    return movieData.find(movie => movie.id === id) || null;
 }
 
 /**

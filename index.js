@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const { getTopRatedMovies, getMoviesByGenre, getMovieDetailsById, selectRandomMovieId, getUpcomingMovies: topRatedMovies } = require('./utils/movieUtils');
+const { getTopRatedMovies, getMoviesByGenre, getMovieDetailsById, selectRandomMovieId, getUpcomingMovies, topRatedMovies } = require('./utils/movieUtils');
 const { Movies, Genres } = require('./utils/data');
 
 const app = express();
@@ -19,16 +19,12 @@ app.get('/movie/:id', (request, response) => {
 });
 
 //Add remaining routes here
-app.get("/upcomingMovies",(request, response) => {
-  const upcomingMovies = upcomingMovies(Movies); // logic in functions
-  
-   response.render('upcomingMovies', { movies: upcomingMovies });
+app.get("/upcomingMovies", (request, response) => {
+  const upcomingMovies = getUpcomingMovies(Movies); // logic in functions
+
+  response.render("upcomingMovies", { movies: upcomingMovies });
 });
-app.get("/topRatedMovies",(request, response) => {
-    const topRatedMovies = topRatedMovies(Movies); // logic in functions
-    
-     response.render('topRatedMovies', { movies: topRatedMovies });
-  });
+
   app.get('/topRatedMovies', (request, response) => {
     const topRatedMovies = getTopRatedMovies();
     response.render('topRatedMovies', { movies: topRatedMovies });

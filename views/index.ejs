@@ -4,17 +4,25 @@
 <!---Upcoming Movies-->
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/header') %> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="/path/to/your/style.css"> 
+</head>
 <body>
-    <main class="main-content">
+    <%- include('partials/header') %> 
+    <h1>Movies</h1> 
+    
+    <div class="movieContainer">
         <% movies.forEach(movie => { %>
-            <div class="movie">
-                <h2><%= movie.title %></h2>
-                <p><%= movie.genre %></p>
-                <p>Rating: <%= movie.rating %></p>
+            <div class="movieItem">
+                <img src="<%= movie.image %>" alt="<%= movie.title %> Poster" class="poster">
+                <h2><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h2>
+                <p><strong>Genre:</strong> <%= movie.genre %></p>
+                <p><strong>Rating:</strong> <%= movie.rating %></p>
             </div>
         <% }); %>
-    </main>
-    
+    </div>
 </body>
 </html>
