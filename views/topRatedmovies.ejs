@@ -20,6 +20,7 @@
     <div class="movieContainer">
         <% movies.forEach(movie => { %>
             <div class="movieItem">
+                 <img src="<%= movie.image %>" alt="<%= movie.title %> Poster" class="poster">
                 <h2><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h2>
                 <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
                 <p><strong>Rating:</strong> <%= movie.rating %> / 10</p>
