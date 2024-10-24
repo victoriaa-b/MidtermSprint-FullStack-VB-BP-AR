@@ -1,3 +1,11 @@
+<!-- Display detailed information about the movie, including: Title, Release year, Description, Director, Rating (out of 10, unreleased movies might not have a rating), Genre
+Include a recommendations section of 3 other movies for the user based on the genre
+The recommendations should be picked by the server on each page load
+
+ 
+
+
+
 app.get('/movie/:id', (req, res) => {
     const movie = getMovieById(req.params.id);
     if (movie) {
@@ -5,4 +13,4 @@ app.get('/movie/:id', (req, res) => {
     } else {
         res.status(404).send('Movie not found');
     }
-});
+}); -->
