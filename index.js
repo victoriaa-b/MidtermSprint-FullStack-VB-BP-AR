@@ -9,9 +9,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 
+// Home Page
 app.get("/", (request, response) => {
-  console.log(Movies); 
-  response.render("index", { movies: Movies });
+  const randomMovie = selectRandomMovieId(Movies, 9);
+  response.render('index', { movies: randomMovie });
 });
 
 app.get('/movie/:id', (request, response) => {
@@ -20,12 +21,14 @@ app.get('/movie/:id', (request, response) => {
 });
 
 //Add remaining routes here
+// Upcoming movies page
 app.get("/upcomingMovies", (request, response) => {
   const upcomingMovies = getUpcomingMovies(Movies).slice(0,5); // logic in functions
 
   response.render("upcomingMovies", { movies: upcomingMovies });
 });
 
+// Top Rated movies page
   app.get('/topRatedmovies', (request, response) => {
     const topRatedMovies = getTopRatedMovies(15);
     console.log(topRatedMovies)
