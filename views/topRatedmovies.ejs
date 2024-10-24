@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies by Genre</title>
+    <link rel="stylesheet" href="/path/to/your/style.css"> 
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>Movies in Genre: <%= genre %></h1> <!-- Display the genre -->
+
+    <div class="movieContainer">
+        <% if (movies.length > 0) { %> <!-- Check if there are movies to display -->
+            <% movies.forEach(movie => { %>
+                <div class="movieItem">
+                    <img src="<%= movie.image %>" alt="<%= movie.title %> Poster" class="poster">
+                    <h2><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h2>
+                    <p><strong>Genre:</strong> <%= movie.genre %></p>
+                    <p><strong>Rating:</strong> <%= movie.rating %></p>
+                    <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
+                    <p><strong>Description:</strong> <%= movie.description %></p>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No movies found for this genre.</p> <!-- Message when no movies are found -->
+        <% } %>
+    </div>
+</body>
+</html>

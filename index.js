@@ -9,8 +9,9 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 
-app.get('/', (request, response) => {
-    response.render('index');
+app.get("/", (request, response) => {
+  console.log(Movies); 
+  response.render("index", { movies: Movies });
 });
 
 app.get('/movie/:id', (request, response) => {
@@ -36,6 +37,7 @@ app.get("/upcomingMovies", (request, response) => {
 });
 
 app.get('/moviesByGenre', (request, response) => {
+  const genre = request.params.genre;
   const moviesByGenre = getMoviesByGenre(9);
   response.render('moviesByGenre', { movies: moviesByGenre });
 });
