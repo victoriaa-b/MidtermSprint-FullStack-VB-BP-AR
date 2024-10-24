@@ -119,3 +119,18 @@ nav img {
     object-fit: cover;  
 }    
 
+.star-rating {
+    font-size: 22px;
+}
+
+.star {
+    color: rgb(255, 255, 255);
+    margin-right: 2px; 
+}
+
+.star.filled {
+    color: #fdc500;
+    text-shadow: 1px 1px 2px #003459;
+   
+}
+
