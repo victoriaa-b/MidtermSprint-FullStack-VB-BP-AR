@@ -119,6 +119,37 @@ nav img {
     object-fit: cover;  
 }    
 
+/* Moving Banner on Home Page */
+.banner-container {
+    width: 100vw; /* Full width of the viewport */
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow */
+    position: relative;
+}
+.banner-content {
+    display: flex; /* Flexbox to align items */
+    width: calc(200%); /* Twice the width for seamless scrolling */
+    animation: scroll 40s linear infinite; /* Adjust duration as needed */
+}
+.banner-image {
+    width: 50%; /* Adjust image width for proper scaling */
+    height: auto; /* Maintain aspect ratio */
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(-50%); /*End position (shift half the width of the banner) */
+    }
+}
+
+/* Home page */
+#head_title {
+    margin: 10px 43%;
+    font-size: 36pt;
+}
+
 .star-rating {
     font-size: 22px;
 }
@@ -133,4 +164,3 @@ nav img {
     text-shadow: 1px 1px 2px #003459;
    
 }
-

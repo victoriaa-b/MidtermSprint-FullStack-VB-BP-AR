@@ -29,11 +29,13 @@ function getMovieDetailsById(id) {
 }
 
 /**
- * Select a random movie ID
- * @returns {number} - A random movie ID
+ * Select `count` random movies
+ * @param {Array.<Object>} movies - An array of movie objects
+ * @param {number} count - The number of random movies to select
+ * @returns {Array.<Object>} - An array of randomly selected movies
  */
-function selectRandomMovieId() {
-    let shuffled = movieData.sort(() => 0.5 - Math.random());
+function selectRandomMovieId(movies, count) {
+    let shuffled = movies.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
 }
 

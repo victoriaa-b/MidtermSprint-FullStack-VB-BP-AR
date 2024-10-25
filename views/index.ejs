@@ -12,13 +12,20 @@
 </head>
 <body>
     <%- include('partials/header') %> 
-    <h1>Movies</h1> 
+    <div class="banner-container">
+        <div class="banner-content">
+            <img src="/images/philly-movies-hero-banner.jpg" alt="Movie Banner" class="banner-image">
+            <img src="/images/philly-movies-hero-banner.jpg" alt="Movie Banner" class="banner-image">
+        </div>
+    </div>
+    <h1 id="head_title">Movies</h1> 
     
     <div class="movieContainer">
         <% movies.forEach(movie => { %>
             <div class="movieItem">
                 <img src="<%= movie.image %>" alt="<%= movie.title %> Poster" class="poster">
                 <h2><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h2>
+                <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
                 <p><strong>Genre:</strong> <%= movie.genre %></p>
                 <p><strong>Rating:</strong> <%= movie.rating %></p>
             </div>
