@@ -18,16 +18,23 @@
             <img src="/images/philly-movies-hero-banner.jpg" alt="Movie Banner" class="banner-image">
         </div>
     </div>
-    <h1 id="head_title">Movies</h1> 
+    <h1 class="head_title">Movies</h1> 
     
     <div class="movieContainer">
         <% movies.forEach(movie => { %>
             <div class="movieItem">
                 <img src="<%= movie.image %>" alt="<%= movie.title %> Poster" class="poster">
-                <h2><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h2>
+                <h2><a href="/movie/<%= movie.id %>"><%= movie.title %></a></h2>
                 <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
                 <p><strong>Genre:</strong> <%= movie.genre %></p>
-                <p><strong>Rating:</strong> <%= movie.rating %></p>
+                <p><strong>Rating:</strong>
+                    <span class="star-rating">
+                        <% for (let i = 1; i <= 10; i++) { %>
+                            <span class="star <%= movie.rating >= i ? 'filled' : '' %>">&#9733;</span>
+                        <% } %>
+                    </span>
+    
+                </p>
             </div>
         <% }); %>
     </div>

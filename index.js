@@ -12,13 +12,13 @@ app.use(express.static('public'));
 // Home Page
 app.get("/", (request, response) => {
   const randomMovie = selectRandomMovieId(Movies, 9);
-  response.render('index', { movies: randomMovie });
-  response.render("index", { movies: Movies });
+  response.render('index', { randomMovie, movies: Movies });
 });
 
 app.get('/movie/:id', (request, response) => {
-    //For use with links like: /movie/1
-    const movieId = request.params.id;
+    const movieId = Number(request.params.id); // Convert to a number
+    const movieDetails = getMovieDetailsById(movieId); // Call with the numeric ID
+    response.render('movieDetails', { movie: movieDetails });
 });
 
 //Add remaining routes here
@@ -36,14 +36,14 @@ app.get("/upcomingMovies", (request, response) => {
     response.render('topRatedMovies', { movies: topRatedMovies });
 });
 
-  app.get('/randomMovieId', (request, response) => {
-    const randomMovieId = selectRandomMovieId(9);
-    response.render('index', { movies: randomMovieId });
-});
+//   app.get('/randomMovieId', (request, response) => {
+//     const randomMovieId = selectRandomMovieId(9);
+//     response.render('index', { movies: randomMovieId });
+// });
 
 app.get('/moviesByGenre', (request, response) => {
   const genre = request.params.genre;
-  const moviesByGenre = getMoviesByGenre(9);
+  const moviesByGenre = getMoviesByGenre(genre);
   response.render('moviesByGenre', { movies: moviesByGenre });
 });
 

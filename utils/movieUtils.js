@@ -22,10 +22,13 @@ function getTopRatedMovies() {
 /**
  * Get the details of a movie by its ID
  * @param {number} id - The ID of the movie
- * @returns {Movies} - The movie object
+ * @returns {Object|null} - The movie object or null if not found
  */
 function getMovieDetailsById(id) {
-    return movieData.find(movie => movie.id === id) || null;
+    if (typeof id !== 'number' || id <= 0) {
+        throw new Error('Invalid ID. It must be a positive number.');
+    }
+    return Movies.find(movie => movie.id === id) || null; // Use Movies instead of movieData
 }
 
 /**

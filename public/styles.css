@@ -145,11 +145,12 @@ nav img {
 }
 
 /* Home page */
-#head_title {
+.head_title {
     margin: 10px 43%;
     font-size: 36pt;
 }
 
+/* Star Rating */
 .star-rating {
     font-size: 22px;
 }
@@ -163,4 +164,30 @@ nav img {
     color: #fdc500;
     text-shadow: 1px 1px 2px #003459;
    
+}
+
+/* Movie Detail Page */
+#movieBox {
+    display: flex;
+    align-items: flex-start; 
+    padding: 20px; 
+    max-width: 1000px; 
+    margin: 0 auto;
+    align-items: center;
+}
+#movieImg {
+    margin-right: 20px; 
+}
+#movieImg img {
+    width: 200px; 
+    height: 300px; 
+    object-fit: cover; 
+}
+#movieAllDetails p {
+    margin: 10px 0; 
+    font-size: 24px;
+}
+#movieStarRating {
+    font-size: 22px; 
+    font-size: 30px;
 }
