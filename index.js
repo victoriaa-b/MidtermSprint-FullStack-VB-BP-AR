@@ -13,6 +13,7 @@ app.use(express.static('public'));
 app.get("/", (request, response) => {
   const randomMovie = selectRandomMovieId(Movies, 9);
   response.render('index', { movies: randomMovie });
+  response.render("index", { movies: Movies });
 });
 
 app.get('/movie/:id', (request, response) => {

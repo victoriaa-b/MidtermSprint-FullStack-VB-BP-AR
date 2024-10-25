@@ -20,7 +20,7 @@ const Movies = [
     description:
       "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
     director: "Francis Ford Coppola",
-    rating: 9.2,
+    rating: 10,
     genre: Genres.CRIME,
     image: "/images/thegodfather.png",
   },
@@ -185,7 +185,7 @@ const Movies = [
     description:
       "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
     director: "Roger Allers, Rob Minkoff",
-    rating: 8.5,
+    rating: 7.9,
     genre: Genres.ANIMATION,
     image: "/images/theLionKing.png",
   },
@@ -196,7 +196,8 @@ const Movies = [
     description:
       "After the devastating events of Infinity War, the Avengers assemble once more to undo Thanos' destruction.",
     director: "Anthony Russo, Joe Russo",
-    rating: 8.4,
+    rating: 8.4
+    ,
     genre: Genres.ACTION,
     image: "/images/avengersEndgame.png",
   },
@@ -277,7 +278,7 @@ const Movies = [
     director: "Cameron Gray",
     rating: null,
     genre: Genres.ACTION,
-    image: "/images/echoesOfTomorrow.png",
+    image: "/images/echosOfTomorrow.png",
   },
   {
     id: 25,
