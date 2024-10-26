@@ -1,23 +1,38 @@
-const { getRandomMoviesByGenre, getTopRatedMovies, formatMovieData, getRandomGenre, generateMovieReport } = require("../../utils/movieUtils");
+const { getMoviesByGenre, getTopRatedMovies, getMovieDetailsById, selectRandomMovieId } = require("../../utils/movieUtils");
+const { Movies } = require("../../utils/data");
 
 describe('Movie Utility Functions', () => {
 
-    describe('getRandomMoviesByGenre', () => {
-        it('should return an array of movies for the specified genre', () => {
-            const genre = 'action';
-            const movies = getRandomMoviesByGenre(genre);
-            expect(Array.isArray(movies)).toBe(true);
+    describe('getMoviesByGenre', () => {
+        it('should return all movies for a specified genre', () => {
+            const genre = 'Action';
+            const movies = getMoviesByGenre(genre); 
             expect(movies.length).toBeGreaterThan(0);
-            expect(movies.every(movie => movie.genre === genre)).toBe(true);
+            expect(movies.every(movie => movie.genre === genre)).toBe(true); 
         });
 
-        it('should return an empty array for an invalid genre', () => {
-            const genre = 'invalidGenre';
-            const movies = getRandomMoviesByGenre(genre);
-            expect(movies).toEqual([]);
+        it('should return an empty array if the genre has no movies', () => {
+            const movies = getMoviesByGenre('nonexistentGenre'); 
+            expect(movies).toEqual([]); 
         });
- });
+    });
+    // describe('getMoviesByGenre', () => {
+    //     it('should return an array of movies for the specified genre', () => {
+    //         const genre = 'action';
+    //         const movies = getMoviesByGenre(genre);
+    //         // expect(Array.isArray(movies)).toBe(true);
+    //         expect(movies.length).toBeGreaterThan(0);
+    //         expect(movies.every(movie => movie.genre === genre)).toBe(true);
+    //     });
 
+    //     it('should return an empty array for an invalid genre', () => {
+    //         // const genre = 'invalidGenre';
+    //         // const movies = getRandomMoviesByGenre(genre);
+    //         // expect(movies).toEqual([]);
+    //         const movies = getMoviesByGenre('nonexistentGenre'); // Check a nonexistent genre
+    //         expect(movies).toEqual([]);
+    //     });
+ 
     describe('getTopRatedMovies', () => {
         it('should return a list of movies sorted by rating in descending order', () => {
             const movies = [
@@ -25,7 +40,7 @@ describe('Movie Utility Functions', () => {
                 { title: 'Movie B', rating: 8.5 },
                 { title: 'Movie C', rating: 9.0 }
             ];
-            const topMovies = getTopRatedMovies(movies);
+            const topMovies = getTopRatedMovies(movies, 3);
             expect(topMovies).toEqual([
                 { title: 'Movie C', rating: 9.0 },
                 { title: 'Movie B', rating: 8.5 },
@@ -34,7 +49,7 @@ describe('Movie Utility Functions', () => {
         });
 
         it('should return an empty array when no movies are provided', () => {
-            const topMovies = getTopRatedMovies([]);
+            const topMovies = getTopRatedMovies([], 3);
             expect(topMovies).toEqual([]);
         });
     });
@@ -59,15 +74,14 @@ describe('Movie Utility Functions', () => {
     describe('selectRandomMovieId', () => {
         it('should return a random movie ID from the provided list', () => {
             const movieIds = [1, 2, 3, 4, 5];
-            const randomId = getRandomGenre(movieIds);
-            expect(movieIds.includes(randomId)).toBe(true);
+            const randomId = selectRandomMovieId(movieIds, 1);
+            expect(randomId.every(id => movieIds.includes(id))).toBe(true);
         });
 
         it('should return undefined when the list is empty', () => {
             const movieIds = [];
-            const randomId = getRandomGenre(movieIds);
-            expect(randomId).toBeUndefined();
+            const randomId = selectRandomMovieId(movieIds, 1);
+            expect(randomId).toEqual([]);
         });
-  []  });
+    });
 });
-getRandomMoviesByGenre
