@@ -16,22 +16,6 @@ describe('Movie Utility Functions', () => {
             expect(movies).toEqual([]); 
         });
     });
-    // describe('getMoviesByGenre', () => {
-    //     it('should return an array of movies for the specified genre', () => {
-    //         const genre = 'action';
-    //         const movies = getMoviesByGenre(genre);
-    //         // expect(Array.isArray(movies)).toBe(true);
-    //         expect(movies.length).toBeGreaterThan(0);
-    //         expect(movies.every(movie => movie.genre === genre)).toBe(true);
-    //     });
-
-    //     it('should return an empty array for an invalid genre', () => {
-    //         // const genre = 'invalidGenre';
-    //         // const movies = getRandomMoviesByGenre(genre);
-    //         // expect(movies).toEqual([]);
-    //         const movies = getMoviesByGenre('nonexistentGenre'); // Check a nonexistent genre
-    //         expect(movies).toEqual([]);
-    //     });
  
     describe('getTopRatedMovies', () => {
         it('should return a list of movies sorted by rating in descending order', () => {
