@@ -144,10 +144,11 @@ nav img {
     }
 }
 
-/* Home page */
+/* Title on pages */
 .head_title {
-    margin: 10px 43%;
-    font-size: 36pt;
+    display: flex;
+    justify-content: center;
+    font-size: 24pt;
 }
 
 /* Star Rating */
