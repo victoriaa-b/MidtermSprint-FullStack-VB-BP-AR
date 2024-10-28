@@ -1,5 +1,4 @@
-
-* {
+ *{
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
@@ -53,6 +52,12 @@ nav {
   
 }
 
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    text-shadow: #003459 2px 2px 2px;
+}
+
 nav a {
     color: #003459; 
     text-decoration: none;
@@ -80,44 +85,68 @@ nav img {
 
 
 .movieContainer {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between;
-    gap: 20px; 
-    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    margin: 0 auto;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px; 
+    padding: 20px; 
 }
 
 .movieItem {
-    flex: 1 1 calc(50% - 20px); 
-    box-sizing: border-box;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center; 
-  
+    text-align: center;
+    background-color: #c0c0c0;
+    border-radius: 10px;
+    padding: 15px; 
+    margin: 0 auto;
+    box-shadow: 0 2px 4px #003459;
+    transition: transform 0.2s ease-in-out;
+    max-width: 375px; 
+    margin: 0 auto; 
+    overflow: hidden; 
 }
 
 .movieItem img {
     max-width: 100%;
     height: auto;
-    
 }
 
-.movieContainer {
-    display: flex;            
-    flex-wrap: wrap;          
-    gap: 20px;               
-}
-
-.movieItem {
-    text-align: center;       
-    width: 200px;            
+.movieItem:hover {
+    transform: scale(1.04); 
 }
 
 .poster {
-    width: 200px;           
-    height: 300px;          
-    object-fit: cover;  
-}    
+    width: 250px;
+    height: 350px; 
+    object-fit: cover;
+    border-radius: 4px;
+} 
+
+
+.movieItem h2 a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold; 
+}
+
+.movieItem h2 a:hover {
+    color: #F6F6F6;
+    text-shadow: 1px 1px 2px #003459;
+}
+
+.movieItem h2 {
+    font-size: 24px; 
+    margin: 10px 0;
+    color: #003459; 
+    transition: color 0.3s ease; 
+}
+
+.movieItem p {
+    font-size: 18px; 
+    margin: 10px 0;
+}
+
 
 /* Moving Banner on Home Page */
 .banner-container {
@@ -148,23 +177,25 @@ nav img {
 .head_title {
     display: flex;
     justify-content: center;
-    font-size: 24pt;
+    font-size: 20pt;
 }
 
 /* Star Rating */
 .star-rating {
-    font-size: 22px;
+    display: flex;
+    justify-content: center; 
+    font-size: 24px;
+    margin-top: 10px;
 }
 
 .star {
-    color: rgb(255, 255, 255);
-    margin-right: 2px; 
+    color: #FFFFFF; 
+    margin-right: 2px;
 }
 
 .star.filled {
-    color: #fdc500;
+    color: #fdc500; 
     text-shadow: 1px 1px 2px #003459;
-   
 }
 
 /* Movie Detail Page */
@@ -191,4 +222,16 @@ nav img {
 #movieStarRating {
     font-size: 22px; 
     font-size: 30px;
+}
+
+.releaseYear,
+.rating,
+.descriptionLabel {
+    font-size: 18px; /* Common font size */
+    color: #003459; /* Common color */
+    font-family: "Limelight", sans-serif; /* Common font family */
+}
+
+p {
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }

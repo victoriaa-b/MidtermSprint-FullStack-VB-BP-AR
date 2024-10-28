@@ -32,7 +32,6 @@ app.get("/upcomingMovies", (request, response) => {
 // Top Rated movies page
   app.get('/topRatedmovies', (request, response) => {
     const topRatedMovies = getTopRatedMovies(15);
-    console.log(topRatedMovies)
     response.render('topRatedMovies', { movies: topRatedMovies });
 });
 

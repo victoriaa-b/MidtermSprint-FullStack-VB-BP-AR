@@ -70,7 +70,7 @@ const Movies = [
   },
   {
     id: 6,
-    title: "The Lord of the Rings: The Fellowship of the Ring",
+    title: "Fellowship of the Ring",
     releaseYear: 2001,
     description:
       "A meek Hobbit and eight companions set out on a journey to destroy a powerful ring.",
@@ -88,7 +88,7 @@ const Movies = [
     director: "Robert Zemeckis",
     rating: 8.8,
     genre: Genres.DRAMA,
-    image: "/images/thegodfather.png",
+    image: "/images/forrestGumpTH.png",
   },
   {
     id: 8,
@@ -147,7 +147,7 @@ const Movies = [
   },
   {
     id: 13,
-    title: "The Shawshank Redemption",
+    title: "Shawshank Redemption",
     releaseYear: 1994,
     description:
       "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
@@ -311,7 +311,7 @@ const Movies = [
     director: "Sarah White",
     rating: null,
     genre: Genres.SCI_FI,
-    image: "/images/lunarColony.png",
+    image: "/images/LUNARCOLO.png",
   },
   {
     id: 28,

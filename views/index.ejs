@@ -19,26 +19,29 @@
         </div>
     </div>
     <div class="head_title"> 
-        <h1 >Movies</h1> 
+        <h1>Movies</h1> 
     </div>
     
     <div class="movieContainer">
         <% movies.forEach(movie => { %>
             <div class="movieItem">
                 <img src="<%= movie.image %>" alt="<%= movie.title %> Poster" class="poster">
-                <h2><a href="/movie/<%= movie.id %>"><%= movie.title %></a></h2>
-                <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
-                <p><strong>Genre:</strong> <%= movie.genre %></p>
-                <p><strong>Rating:</strong>
+                <h2><a href="/movie/<%= movie.id %>" class="movie-title"><%= movie.title %></a></h2>
+                <p><strong><span class="releaseYear">Release Year:</span></strong> <%= movie.releaseYear %></p>
+                <p><strong><span class="releaseYear">Genre:</span></strong> <%= movie.genre %></p>
+                <p><strong><span class="rating">Rating:</span></strong>
                     <span class="star-rating">
                         <% for (let i = 1; i <= 10; i++) { %>
                             <span class="star <%= movie.rating >= i ? 'filled' : '' %>">&#9733;</span>
                         <% } %>
                     </span>
-    
                 </p>
             </div>
         <% }); %>
+    </div>
+</body>
+</html>
+
     </div>
 </body>
 </html>

@@ -22,8 +22,8 @@
         <div class="movieItem">
             <img src="<%= movie.image %>" alt="<%= movie.title %> Poster" class="poster">
             <h2><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h2>
-            <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
-            <p><strong>Rating:</strong>
+            <p><strong><span class="releaseYear">Release Year:</span></strong> <%= movie.releaseYear %></p>
+            <p><strong><span class="rating">Rating:</span></strong>
                 <span class="star-rating">
                     <% for (let i = 1; i <= 10; i++) { %>
                         <span class="star <%= movie.rating >= i ? 'filled' : '' %>">&#9733;</span>
@@ -31,7 +31,7 @@
                 </span>
 
             </p>
-            <p><strong>Description:</strong> <%= movie.description %></p>
+            <p><strong><span class="descriptionLabel">Description:</span></strong> <%= movie.description %></p>
         </div>
     <% }); %>
 </div>
