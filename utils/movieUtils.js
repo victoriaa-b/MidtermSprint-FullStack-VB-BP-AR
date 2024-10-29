@@ -4,11 +4,18 @@ const { Movies, Genres } = require("./data");
  * Get `x` movies by genre
  * @param {Genres} genre - The genre of the movies
  * @param {number} x - The number of movies to retrieve
+ * @param {string} excludeId - An optional movie ID to exclude from the results
  * @returns {Array.<Movies>} - An array of movies matching the genre
  */
-function getMoviesByGenre(genre, count) {
-        return Movies.filter(movie => movie.genre === genre).slice(0, count);
-    }
+function getMoviesByGenre(genre, count, excludeId) {
+    const filteredMovies = Movies.filter(movie => movie.genre === genre && movie.id !== excludeId);
+    
+    // Shuffle the filtered movies to get random results
+    const shuffledMovies = filteredMovies.sort(() => 0.5 - Math.random());
+    
+    return shuffledMovies.slice(0, count);
+}
+
     
 /**
  * Get the `x` top rated movies, ordered by rating

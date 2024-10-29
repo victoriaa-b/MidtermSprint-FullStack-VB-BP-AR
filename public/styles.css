@@ -235,3 +235,12 @@ nav img {
 p {
      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
+/* Recommendations */
+.recommendations {
+    margin-top: 20px;
+}
+
+.recommended-movies {
+    display: flex;
+    flex-wrap: wrap;
+}
