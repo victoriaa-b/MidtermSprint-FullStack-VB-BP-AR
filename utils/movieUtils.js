@@ -15,8 +15,10 @@ function getMoviesByGenre(genre, count) {
  * @param {number} x - The number of top-rated movies to retrieve
  * @returns {Array.<Movies>} - An array of top-rated movies
  */
-function getTopRatedMovies() {
-     return Movies.slice().sort((a, b) => b.rating - a.rating).slice(0, 15); // more then 15 appearing double checl
+function getTopRatedMovies(movies, count) {
+    return movies
+        .sort((a, b) => b.rating - a.rating) // Sort by rating in descending order
+        .slice(0, count); // Limit to specified count
 }
 
 /**
