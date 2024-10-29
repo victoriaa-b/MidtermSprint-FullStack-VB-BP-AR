@@ -18,21 +18,21 @@
             <img src="<%= movie.image %>" alt="<%= movie.title %> Poster">
         </div>
         <div id="movieAllDetails">
-            <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
-            <p><strong>Genre:</strong> <%= movie.genre %></p>
-            <p><strong>Director:</strong> <%= movie.director %></p>
-            <p><strong>Rating:</strong>
+            <p><strong><span class="rating">Release Year:</span></strong> <%= movie.releaseYear %></p>
+            <p><strong><span class="rating">Genre:</span></strong> <%= movie.genre %></p>
+            <p><strong><span class="rating">Director:</span></strong> <%= movie.director %></p>
+            <p><strong><span class="rating">Rating:</span></strong>
                 <span id="movieStarRating">
                     <% for (let i = 1; i <= 10; i++) { %>
                         <span class="star <%= movie.rating >= i ? 'filled' : '' %>">&#9733;</span>
                     <% } %>
                 </span>
             </p>
-            <p><strong>Description:</strong> <%= movie.description %></p>
+            <p><strong><span class="rating">Description:</span></strong> <%= movie.description %></p>
         </div>
     </div>
 
-    <div class="head_title"> 
+    <div class="recommendationsTitle"> 
         <h2>You might like this</h2> 
     </div>
     <div class="recommendations">
@@ -43,8 +43,8 @@
                         <img src="<%= rec.image %>" alt="<%= rec.title %> Poster" class="poster">
                         <h2><a href="/movie/<%= rec.id %>" class="movie-title"><%= rec.title %></a></h2>
                         <p><strong><span class="releaseYear">Release Year:</span></strong> <%= rec.releaseYear %></p>
-                        <p><strong><span class="releaseYear">Genre:</span></strong> <%= rec.genre %></p>
-                        <p><strong><span class="rating">Rating:</span></strong>
+                        <p><strong><span class="styleText">Genre:</span></strong> <%= rec.genre %></p>
+                        <p><strong><span class="styleText">Rating:</span></strong>
                             <span class="star-rating">
                                 <% for (let i = 1; i <= 10; i++) { %>
                                     <span class="star <%= rec.rating >= i ? 'filled' : '' %>">&#9733;</span>
@@ -55,7 +55,7 @@
                 <% }) %>
             </div>
         <% } else { %>
-            <p>No recommendations available.</p>
+            <p><span class="centerText">No recommendations available</span></p>
         <% } %>
     </div>
 
