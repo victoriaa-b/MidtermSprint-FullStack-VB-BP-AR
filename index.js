@@ -18,7 +18,11 @@ app.get("/", (request, response) => {
 app.get('/movie/:id', (request, response) => {
     const movieId = Number(request.params.id); // Convert to a number
     const movieDetails = getMovieDetailsById(movieId); // Call with the numeric ID
-    response.render('movieDetails', { movie: movieDetails });
+
+      // Get recommendations based on the genre of the random movie, excluding the random movie itself
+    const recommendations = getMoviesByGenre(movieDetails.genre, 3, movieDetails.id);
+
+    response.render('movieDetails', { movie: movieDetails, recommendations });
 });
 
 //Add remaining routes here
@@ -31,14 +35,20 @@ app.get("/upcomingMovies", (request, response) => {
 
 // Top Rated movies page
   app.get('/topRatedmovies', (request, response) => {
-    const topRatedMovies = getTopRatedMovies(15);
+    const topRatedMovies = getTopRatedMovies(Movies, 15);
     response.render('topRatedMovies', { movies: topRatedMovies });
 });
 
-  app.get('/randomMovie', (request, response) => {
-    const randomMovie = selectRandomMovieId(Movies, 1);
-    response.render('randomMovie', { movie: randomMovie });
+app.get('/randomMovie', (request, response) => {
+  const randomMovieArray = selectRandomMovieId(Movies, 1);
+  const randomMovie = randomMovieArray[0];
+
+  // Get recommendations based on the genre of the random movie, excluding the random movie itself
+  const recommendations = getMoviesByGenre(randomMovie.genre, 3, randomMovie.id);
+
+  response.render('randomMovie', { movie: randomMovie, recommendations });
 });
+
 
 app.get('/moviesByGenre', (request, response) => {
   const genre = request.params.genre;
