@@ -41,7 +41,7 @@ describe('Movie Utility Functions', () => {
     describe('getMovieDetailsById', () => {
         it('should return movie details for a valid movie ID', () => {
             const movieId = 10;
-            const movieDetails = formatMovieData(movieId);
+            const movieDetails = getMovieDetailsById(movieId); // Corrected function
             expect(movieDetails).toHaveProperty('id', movieId);
             expect(movieDetails).toHaveProperty('title');
             expect(movieDetails).toHaveProperty('genre');
@@ -50,7 +50,7 @@ describe('Movie Utility Functions', () => {
 
         it('should return null for an invalid movie ID', () => {
             const movieId = 9999;
-            const movieDetails = formatMovieData(movieId);
+            const movieDetails = getMovieDetailsById(movieId); // Corrected function
             expect(movieDetails).toBeNull();
         });
     });
