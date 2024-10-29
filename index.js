@@ -35,10 +35,10 @@ app.get("/upcomingMovies", (request, response) => {
     response.render('topRatedMovies', { movies: topRatedMovies });
 });
 
-//   app.get('/randomMovieId', (request, response) => {
-//     const randomMovieId = selectRandomMovieId(9);
-//     response.render('index', { movies: randomMovieId });
-// });
+  app.get('/randomMovie', (request, response) => {
+    const randomMovie = selectRandomMovieId(Movies, 1);
+    response.render('randomMovie', { movie: randomMovie });
+});
 
 app.get('/moviesByGenre', (request, response) => {
   const genre = request.params.genre;

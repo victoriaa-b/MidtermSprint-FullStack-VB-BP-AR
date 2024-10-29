@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= movie.title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %> 
+
+    <h1 class="head_title"><%= movie.title %></h1>
+
+    <div id="movieBox">
+        <div id="movieImg">
+            <img src="<%= movie.image %>" alt="<%= movie.title %> Poster">
+        </div>
+        <div id="movieAllDetails">
+            <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
+            <p><strong>Rating:</strong>
+                <span id="movieStarRating">
+                    <% for (let i = 1; i <= 10; i++) { %>
+                        <span class="star <%= movie.rating >= i ? 'filled' : '' %>">&#9733;</span>
+                    <% } %>
+                </span>
+            </p>
+            <p><strong>Description:</strong> <%= movie.description %></p>
+        </div>
+    </div>
+
+
+</body>
+</html>
