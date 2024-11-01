@@ -37,7 +37,7 @@
     </div>
     <div class="recommendations">
         <% if (recommendations.length > 0) { %>
-            <div class="recommended-movies">
+            <div class="recommended-movies"> <!--Note: Not all movies can have thre movies as there isnt enough in the data-->
                 <% recommendations.forEach(rec => { %>
                     <div class="movieItem">
                         <img src="<%= rec.image %>" alt="<%= rec.title %> Poster" class="poster">
